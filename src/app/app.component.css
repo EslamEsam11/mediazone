@@ -70,17 +70,21 @@ pointer-events: none;
   top: 12%;
   z-index: 99999999;
   transition: all 0.3s ease-in-out;
+    padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.navBar ul li a {
+.navBar ul li .nav-link {
+  color: rgba(255, 255, 255, 0.774);
+}
+.navBar ul li .nav-link.active {
   color: white;
+  font-weight: 700;
 }
 .navBar  .logoMedai {
-    background-image: url(../assets/images/logo.png2\ 1.png);
+    /* background-image: url(../assets/images/logo.png2\ 1.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-    width: 100px;
-  height: 66px;
+  background-size: cover; */
     position: absolute;
   right: 20%;
   rotate: -22deg;
@@ -96,16 +100,10 @@ pointer-events: none;
   right: 20%;
   top: 14%;
 }
-.navBar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 .logoMedai img {
-  height: 40px;
+    height: 68px;
+    width: 100px;
 }
 
 .nav-links {
@@ -119,7 +117,6 @@ pointer-events: none;
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
 }
 
 .nav-toggle {
@@ -182,6 +179,9 @@ background-image: url(../assets/images/대지\ home.svg);
   justify-content: center;
   align-items: center;
 }
+.about .container .row {
+  padding-top: 60px;
+}
 /* .aboutUs {
   position: absolute;
   left: 0;
@@ -192,14 +192,13 @@ background-image: url(../assets/images/대지\ home.svg);
   align-items: center;
 } */
 .aboutUs .titleLeft h2:first-child {
-  font-family: "Saes Grotesk", Sans-serif;
-  font-size: 40px;
-  font-weight: 700;
+     font-family: R-Jaro;
+  font-size: 57px;
   color: #ffffff;
   margin-bottom: 20px;
 }
 .aboutUs .titleLeft .Who {
-  font-family: "Saes Grotesk", Sans-serif;
+    font-family: R-Jaro;
   font-size: 30px;
   font-weight: 700;
   color: #ffffff;
@@ -212,32 +211,36 @@ hr {
   margin: 0;
 }
 .aboutUs .titleLeft p {
-  font-family: "Saes Grotesk", Sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #d4d4d4;
-  margin-top: 20px;
-  line-height: 1.5;
+    font-family: M-inter;
+    font-size: 12px;
+    font-weight: 400;
+    color: #d4d4d4;
+    margin-top: 20px;
+    line-height: 1.5;
+    width: 69%;
+
 }
 .aboutUs .titleRight h2 {
-  font-family: "Saes Grotesk", Sans-serif;
+     font-family: R-Jersey10;
   font-size: 40px;
-  font-weight: 600;
   color: #ffd933;
+      line-height: 1;
 }
-.aboutUs .titleRight h2 span {
-  font-family: "Saes Grotesk", Sans-serif;
+.aboutUs .titleRight p  {
+    font-family: M-inter;
   font-size: 14px;
   font-weight: 400;
+  width: 65%;
   color: #d4d4d4;
 }
 .aboutUs .right .imgR {
   position: absolute;
-  right: 30%;
+    right: -42%;
+    top: 38%;
 }
 .aboutUs .right .imgR img {
-  width: 150px;
-  height: 200px;
+    width: 227px;
+    height: 302.11px;
 }
 
 .titleAboutUs {
@@ -248,69 +251,74 @@ hr {
 }
 .titleAboutUs h2 {
   font-family: "Vina Sans", Sans-serif;
-  font-size: 310.35px;
+  font-size: 277.35px;
   font-weight: 400;
   letter-spacing: 6.8px;
   color: #ffffff;
+      margin-top: -80px;
 }
-
+.titleAboutUs h2 span {
+  position: relative;
+  z-index: 2;
+}
 
 .whoAreWe {
-  position: absolute;
-  left: 50px;
-  top: 25%;
-  background-color: #f23619;
-  font-family: "Impact", Sans-serif;
-  font-size: 23.87px;
-  font-weight: 400;
-  fill: #ffffff;
-  color: #ffffff;
-  padding: 5px 20px;
-  border-radius: 20px;
-  rotate: 20deg;
+    position: absolute;
+    left: 35px;
+    top: -2%;
+    background-color: #f23619;
+    font-family: "Impact", Sans-serif;
+    font-size: 23.87px;
+    font-weight: 400;
+    fill: #ffffff;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 14px;
+    rotate: 20deg;
 }
 .services {
-  position: absolute;
-  left: 30%;
-  bottom: 30%;
-  background-color: #0358ff;
-  font-family: "Jaro", Sans-serif;
-  font-size: 44.17px;
-  font-weight: 400;
-  fill: #ffffff;
-  color: #ffffff;
-  border-radius: 30px;
-  padding: 2px 30px;
+    position: absolute;
+    left: 30%;
+    bottom: 9%;
+    background-color: #586BF4;
+    font-family: "Jaro", Sans-serif;
+    font-size: 31.17px;
+    font-weight: 400;
+    fill: #ffffff;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 2px 30px;
 }
 .ourProjects {
-  position: absolute;
-  left: 45%;
-  top: 20%;
-  background-color: #ffd311;
-  font-family: "Jersey 10", Sans-serif;
-  font-size: 33px;
-  font-weight: 400;
-  fill: #206bff;
-  color: #206bff;
-  border-radius: 30px;
-  padding: 2px 30px;
+position: absolute;
+    left: 46%;
+    top: -6%;
+    background-color: #FFD933;
+    font-family: "Jersey 10", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    fill: #206bff;
+    color: #206bff;
+    border-radius: 14px;
+    padding: 2px 18px;
 }
 .ourTeam {
-  position: absolute;
-  right: 0%;
-  bottom: 30%;
-  background-color: #15865b;
-  font-family: "Irish Grover", Sans-serif;
-  font-size: 30.46px;
-  font-weight: 400;
-  fill: #ffd933;
-  color: #ffd933;
-  border-radius: 30px;
-  padding: 5px;
-  rotate: 10deg;
+    position: absolute;
+    right: 5%;
+    bottom: 48%;
+    background-color: #37A87D;
+    font-family: "Irish Grover", Sans-serif;
+    font-size: 30.46px;
+    font-weight: 400;
+    fill: #ffd933;
+    color: #ffd933;
+    border-radius: 14px;
+    padding: 0px 10px;
+    z-index: 1;
+    rotate: 10deg;
 }
 /* caseStudies */
-.caseStudi{
+.caseStudi ,.results{
   background-image: url(../assets/images/caseStudies.svg);
 
   background-position: center center;
@@ -327,39 +335,45 @@ hr {
 
 }
 .caseStudies .projects p {
-  rotate: -10deg;
-  background-color: #bbe9ff;
-  padding: 20px;
-  border-radius: 65px;
-  font-family: "Saes Grotesk", Sans-serif;
-  font-size: 27.23px;
-  font-weight: 600;
-  color: #1c1b21;
-  width: max-content;
+rotate: -10deg;
+    background-color: #bbe9ff;
+    padding: 14px;
+    border-radius: 65px;
+    font-family: R-ZenDots;
+    font-size: 22.23px;
+    color: #1c1b21;
+    width: max-content;
+    position: relative;
+    top: 10%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 7px, rgba(0, 0, 0, 0.3) 0px 7px 24px -3px, rgba(0, 0, 0, 0.2) 0px -3px 4px inset;
+
 }
 .caseStudies .projects span {
-  font-family: "Saes Grotesk", Sans-serif;
-  font-size: 115.49px;
-  font-weight: 700;
-  color: #ffffff;
-  position: absolute;
-  top: -25%;
-  right: 20%;
-  rotate: -10deg;
+    font-family: R-ZenDots;
+    font-size: 115.49px;
+    color: #ffffff;
+    position: absolute;
+    top: -19%;
+    right:18%;
+    rotate: -10deg;
 }
 .caseStudies .projects h2 {
-  rotate: -10deg;
-  background-color: #ffd933e8;
-  padding: 0 20px;
-  border-radius: 100px 100px 100px 100px;
-  font-family: "Vibur", Sans-serif;
-  font-size: 171.27px;
-  font-weight: 400;
-  color: #1c1b21;
+    rotate: -2deg;
+    background-image: url(../assets/images/Rectangle\ 65.svg);
+    width: 100%;
+    height: 290px;
+    /* background-color: #f5d449bf; */
+    padding: 53px 110px;
+    border-radius: 100px 100px 100px 100px;
+    background-size: cover;
+    font-family: "Vibur", Sans-serif;
+    font-size: 152.27px;
+    font-weight: 400;
+    color: #1c1b21;
 }
 .caseStudies .clients h2 {
   rotate: 10deg;
-  background-color: #0056ffed;
+background-color: #206bffb3;
   padding: 0px 80px;
   border-radius: 100px;
   font-family: "Vibur", Sans-serif;
@@ -367,17 +381,19 @@ hr {
   font-weight: 400;
   color: #ffffff;
   position: relative;
-  top: 30%;
-right: -10%;
+top: 56%;
+    right: 15%;
 }
 .caseStudies .clients::after {
-  content: url(https://mediazoneag.com/wp-content/uploads/2025/05/unnamed-file.png);
+  content:  url(https://mediazoneag.com/wp-content/uploads/2025/05/unnamed-file.png);
+
   position: absolute;
-  /* left: 46%; */
-  transform: translateX(-50%);
-    opacity: var(--pseudo-opacity);
-  transform: translateX(-50%) scale(0.8);
-  transition: opacity 0.5s, transform 0.5s; 
+  transform: translateX(-135%) scale(0.8);
+  opacity: var(--pseudo-opacity);
+  -webkit-transform: translateX(-135%) scale(0.8);
+  -moz-transform: translateX(-135%) scale(0.8);
+  -ms-transform: translateX(-135%) scale(0.8);
+  -o-transform: translateX(-135%) scale(0.8);
 }
 
 .caseStudi .clients {
@@ -404,15 +420,14 @@ right: -10%;
 
 }
 .results .left h2 {
-  font-family: "Saes Grotesk", Sans-serif;
+
+font-family: R-Jaro;
     font-size: 60px;
-    font-weight: 700;
     color: #FFFFFF;
 }
 .results .left p {
-  font-family: "Saes Grotesk", Sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  font-family: R-Hiragino;
+    font-size: 35px;
     color: #FFFFFF;
     margin: 20px 0;
 }
@@ -430,6 +445,12 @@ right: -10%;
   max-width: 300px;
 }
 /* swiper-section */
+section#swiper-section {
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+}
 .swiper-wrapper {
   z-index: auto;
 }
@@ -451,8 +472,8 @@ right: -10%;
 
 
 .swiper-section  .swiper-slide {
-    width: 250px !important;
-    height: 250px;
+    width: 200px !important;
+    height: 200px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -467,6 +488,14 @@ right: -10%;
   border-radius: 20px;
 }
 /* ourServices */
+section#ourServices {
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
 .ourServices .title h2 {
   font-family: "Vina Sans", Sans-serif;
     font-size: 230px;
@@ -511,10 +540,12 @@ right: -10%;
 .our-work {
     height: 118vh;
 }
-.our-work .container .title h2 {
+.our-work  .title h2 {
       font-family: "Vibur", Sans-serif;
-    font-size: 110.85px;
+    font-size: 72.85px;
     font-weight: 400;
+        padding-top: 60px;
+            padding-left: 20px;
     color: #206BFF;
 }
 
@@ -544,6 +575,7 @@ right: -10%;
   display: flex
 ;
     justify-content: start;
+
 }
 
 .panel-title {
@@ -585,7 +617,7 @@ right: -10%;
 
 .accordion-panel.open .panel-content {
   opacity: 1;
-  transform: translateY(0);
+      transform: translateY(-19%);
 }
 
 .panel-content h2 {
@@ -619,6 +651,7 @@ right: -10%;
 /* knowforDigital */
 .knowforDigital {
   background-color: rgb(32, 107, 255);
+      padding-top: 45px;
 }
 .knowforDigital .container{
   padding-top: 60px;
@@ -645,8 +678,7 @@ right: -10%;
 
 
 .knowforDigital  .swiper-slide {
-    width: 250px !important;
-    height: 250px;
+    height: 330px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;

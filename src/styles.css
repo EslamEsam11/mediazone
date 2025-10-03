@@ -35,3 +35,34 @@ section {
   scroll-snap-stop: always;
 }
 
+
+
+@font-face {
+    font-family: R-saesgrotesk;
+    src: url(../src/fonts/saesgrotesk-regular.ttf)
+}
+
+@font-face {
+    font-family: R-Jaro;
+    src: url(../src/fonts/Jaro_9pt-Regular.ttf)
+}
+@font-face {
+    font-family: M-inter;
+    src: url(../src/fonts/Inter_18pt-Medium.ttf)
+}
+@font-face {
+    font-family: R-Jersey10;
+    src: url(../src/fonts/Jersey10-Regular.ttf)
+}
+@font-face {
+    font-family: R-ZenDots;
+    src: url(../src/fonts/ZenDots-Regular.ttf)
+}
+@font-face {
+    font-family: R-Hiragino;
+    src: url(../src/fonts/Hiragino\ Maru\ Gothic\ ProN\ W4.otf)
+}
+
+.R-saesgrotesk{
+    font-family:  R-saesgrotesk;
+}

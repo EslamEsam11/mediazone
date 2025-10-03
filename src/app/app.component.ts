@@ -424,6 +424,12 @@ ngAfterViewInit() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 1 },
+                1024: { slidesPerView: 5 },
+                1440: { slidesPerView: 5 },
+            },
       autoplay: {
         ...autoplayOptions,
       },
@@ -448,10 +454,21 @@ ngAfterViewInit() {
     this.setupCaseStudiesAnimation(); 
     this.setupAboutAnimation(); 
     this.setupScrollSnapping();
+    this.setupNavColorChange();
   }, 800); 
 }
 
-
+setupNavColorChange(): void {
+  gsap.to('.nav-links a', {
+    color: '#206BFF', 
+    scrollTrigger: {
+      trigger: '.our-work', 
+      start: 'top 10%',     
+      end: 'bottom 10%',    
+      toggleActions: 'play reverse play reverse', 
+    }
+  });
+}
 setupTvAnimation(): void {
   const screen = document.querySelector('.screen-content') as HTMLElement;
   if (screen) {
