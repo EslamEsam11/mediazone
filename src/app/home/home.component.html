@@ -1,0 +1,406 @@
+<section class=" tv-animation-container">
+  <div class="tv-frame-wrapper ">
+<nav class="navBar">
+
+
+  <ul class="nav-links" [class.nav-open]="isMenuOpen">
+    <li class="nav-item"><a class="nav-link active" >Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Services </a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Hiring</a></li>
+    <li class="nav-item"><a class="nav-link"  href="/projects">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+  </ul>
+  <a href="#" class="logoMedai">
+    <img src="assets/images/logo.png2 1.png" alt="Logo">
+  </a>
+  <button class="nav-toggle" aria-label="toggle navigation" 
+          (click)="toggleMenu()" 
+          [class.is-active]="isMenuOpen">
+    <span class="hamburger"></span>
+  </button>
+</nav>
+    <div class="home">
+      <div class="logo">
+        <img
+          src="https://mediazoneag.com/wp-content/uploads/2025/04/logo.png"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h2>We Make it Simple, but.. </h2>
+        <p>SIGNIFICANT</p>
+      </div>
+    </div>
+    <div class="scrol">
+      <a href="">SCROLL</a>
+    </div>
+
+
+
+  </div>
+
+
+</section>
+  <div class="screen-content ">
+    <!-- <div class="scrol">
+      <a href="">SCROLL</a>
+    </div> -->
+    <div class="logoMediaZone">
+      <img src="" alt="" />
+    </div>
+  </div>
+<section class="about snap-section position-relative">
+      <!-- aboutUs -->
+    <div class="container position-relative " >
+      <div class="aboutUs" id="aboutUs">
+        <div class="row ">
+          <div class="col-md-6">
+            <div class="titleLeft">
+              <h2>
+             we make sure your idea & Creation delivered Properly
+              </h2>
+              <h2 class="Who">
+                Who Are
+                <hr />
+                We <span>?</span>
+              </h2>
+              <p class="text-uppercase">
+                We’re MediaZone a full-service marketing agency built to move
+                brands forward. From bold ideas to effective execution, we help
+                you grow, connect, and stand out where it matters most.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 position-relative right">
+            <div class="titleRight mt-4">
+              <h2>
+we make sure your idea & Creation delivered Properly
+
+              </h2>
+                              <p>
+                  Your 360° partner in marketing here for every idea, every
+                  step, every win.</p>
+            </div>
+            <div class="imgR">
+              <img
+                src="https://mediazoneag.com/wp-content/uploads/2025/04/image-23-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="titleAboutUs">
+        <div class="txt position-relative">
+          <h2>About U<span>s</span></h2>
+          <span class="whoAreWe">Who are we</span>
+          <span class="services">Services</span>
+          <span class="ourProjects">Our Projects</span>
+          <span class="ourTeam">Our Team</span>
+        </div>
+      </div>
+    </div>
+</section>
+    <!-- end aboutUs -->
+     <!-- start caseStudies  -->
+     <section class="caseStudi snap-section">     <div class="caseStudies " id="caseStudies">
+      <div class="container d-flex justify-content-center ">
+        <div class="projects position-relative">
+          <p>CaseStudies </p>
+          <span>Our</span>
+          <h2>Projects</h2>
+        </div>
+        <div class="clients">
+          <h2>Clients</h2>
+        </div>
+      </div>
+     </div></section>
+     <!-- end caseStudies -->
+<!-- start results -->
+<section class="results snap-section" id="results">
+  <div class="container">
+    <div class="row " >
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="left">
+          <h2>Our Case Studies </h2>
+          <p>
+          Proof of excellence? Let our work speak for itself.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="right">
+          <img
+            src="https://mediazoneag.com/wp-content/uploads/2025/05/Group-37645-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end results -->
+ <!-- start swiper -->
+<section class="swiper-section snap-section" id="swiper-section">
+  <div class="title d-flex justify-content-center align-items-center">
+    <h2>CaseStudies</h2>
+  </div>
+<div class="swiper-container swiper-forward">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let img of images">
+      <img [src]="img" alt="logo" />
+    </div>
+  </div>
+</div>
+<div class="swiper-container swiper-reverse">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let img of images">
+      <img [src]="img" alt="logo" />
+    </div>
+  </div>
+</div>
+</section>
+<!-- end swiper -->
+ <section class="ourServices snap-section" id="ourServices">
+  <div class="container">
+    <div class="title  d-flex justify-content-center align-items-center">
+      <h2>Our Services</h2>
+    </div>
+  </div>
+  <div class="marquee-container">
+    <div class="marquee-wrapper">
+      <div class="marquee-slide">Websites <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Mobile Apps <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Marketing <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Consulting</div>
+  
+      <div class="marquee-slide">Websites <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Mobile Apps <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Marketing <span style="color: gold;">★</span></div>
+      <div class="marquee-slide">Consulting</div>
+    </div>
+  </div>
+ </section>
+<!-- start our work -->
+<section class="our-work snap-section" id="our-work">
+  <div class="containers">
+     <div class="title  d-flex  align-items-center">
+      <h2>Our Services</h2>
+  </div>
+  </div>
+<div class="accordion-container">
+  <div *ngFor="let panel of panels"
+       class="accordion-panel"
+       [style.background-color]="panel.color"
+       [ngClass]="{ 'open': panel.id === openPanelId }"
+       (click)="togglePanel(panel.id)">
+
+    <h3 class="panel-title" [style.color]="panel.titleColors">{{ panel.title }}</h3>
+
+    <div class="panel-content">
+      <div class="content-inner">
+              <button>Read More</button>
+        <img src="{{ panel.img }}" alt="">
+        <h2 [style.color]="panel.titleColors">{{ panel.heading }}</h2>
+        <p [style.color]="panel.titleColors">{{ panel.text }}</p>
+  
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- end our work -->
+ <!-- start know for digital -->
+ <section class="knowforDigital snap-section" id="knowforDigital">
+  <div class="containers">
+     <div class="title  d-flex  align-items-center">
+      <h2>We are Know For</h2>
+    </div>
+          <p>We deliver strategy-driven visuals, bold content, and seamless experiences that make your brand unforgettable
+
+</p>
+
+  <div class="swiper-container swiper-knowforDigital position-relative">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let img of images">
+      <img [src]="img" alt="logo" />
+    </div>
+   
+  </div>
+        <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+</div>
+  </div>
+
+
+ </section>
+<!-- end know for digital -->
+<section class="meetOurTeam snap-section" id="meetOurTeam">
+  <div class="container d-flex justify-content-center align-items-center">
+     <div class="title    d-flex justify-content-center align-items-center ">
+      <h2>Meet our team</h2>
+    </div>
+  </div>
+</section>
+<section class="imgMeetOurTeam snap-section position-relative"  id="imgMeetOurTeam">
+<div class="imgPng">
+
+</div>
+
+</section>
+<section class="teamMediaZone position-relative snap-section" id="teamMediaZone">
+<div class="backg">
+</div>
+<div class="container">
+<div class="swiper-container swiper-teamMediaZone">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide position-relative" *ngFor="let dataTe of dataTeam">
+      <div class="shadow"></div>
+      <img src="{{dataTe.img}}" alt="logo" />
+      <div class="name">{{dataTe.name}}</div>
+      <div class="job">{{dataTe.Job}}</div>
+    </div>
+  </div>
+</div>
+</div>
+
+</section>
+
+<footer class="site-footer snap-section">
+  <div class="container">
+    <h2 class="footer-main-title">Zone in Stand Out</h2>
+
+    <div class="footer-grid">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="https://mediazoneag.com/wp-content/uploads/2025/03/logo.png3-1.svg" alt="Media Zone Logo">
+        </div>
+        <div class="card location-card">
+          <h3>Location</h3>
+          <p>South Teseen st, 2nd floor, building 304, Fifth Town, New Cairo City, Egypt</p>
+        </div>
+        <div class="card social-card">
+          <a href="#"><i class="fab fa-instagram"></i> mediazoneagency</a>
+          <a href="#"><i class="fab fa-facebook-f"></i> MediaZone</a>
+          <a href="#"><i class="fab fa-linkedin-in"></i> mediazonee_agency</a>
+        </div>
+      </div>
+
+      <div class="footer-chat">
+        <div class="card chat-card">
+          <span class="chat-icon">💬</span>
+          <h3>Start Chat</h3>
+          <a href="#" class="btn-talk">Let's Talk now</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="links-column">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our Projects</a></li>
+          </ul>
+          <h4>Websites</h4>
+          <ul>
+            <li><a href="#">Eden</a></li>
+            <li><a href="#">Broker</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Aplication</a></li>
+            <li><a href="#">Line</a></li>
+          </ul>
+        </div>
+        <div class="links-column">
+          <h4>Mobile Apps</h4>
+          <ul>
+            <li><a href="#">Khoyout</a></li>
+            <li><a href="#">Bondok</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Liiago</a></li>
+            <li><a href="#">Champion</a></li>
+          </ul>
+          <h4>production</h4>
+          <ul>
+            <li><a href="#">Bonanova</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Madaen</a></li>
+            <li><a href="#">AD Developments</a></li>
+          </ul>
+        </div>
+        <div class="links-column">
+          <h4>Brand Identity</h4>
+          <ul>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Bonanova</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Amsaar Development</a></li>
+            <li><a href="#">Elysium</a></li>
+          </ul>
+          <h4>Social Media</h4>
+          <ul>
+            <li><a href="#">The Laundry</a></li>
+            <li><a href="#">Burger</a></li>
+            <li><a href="#">Dentalia Care</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer snap-section footerLink">
+        <div class="footer-links">
+        <div class="links-column">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our Projects</a></li>
+          </ul>
+          <h4>Websites</h4>
+          <ul>
+            <li><a href="#">Eden</a></li>
+            <li><a href="#">Broker</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Aplication</a></li>
+            <li><a href="#">Line</a></li>
+          </ul>
+        </div>
+        <div class="links-column">
+          <h4>Mobile Apps</h4>
+          <ul>
+            <li><a href="#">Khoyout</a></li>
+            <li><a href="#">Bondok</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Liiago</a></li>
+            <li><a href="#">Champion</a></li>
+          </ul>
+          <h4>production</h4>
+          <ul>
+            <li><a href="#">Bonanova</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Madaen</a></li>
+            <li><a href="#">AD Developments</a></li>
+          </ul>
+        </div>
+        <div class="links-column">
+          <h4>Brand Identity</h4>
+          <ul>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Bonanova</a></li>
+            <li><a href="#">Qubitarts</a></li>
+            <li><a href="#">Amsaar Development</a></li>
+            <li><a href="#">Elysium</a></li>
+          </ul>
+          <h4>Social Media</h4>
+          <ul>
+            <li><a href="#">The Laundry</a></li>
+            <li><a href="#">Burger</a></li>
+            <li><a href="#">Dentalia Care</a></li>
+          </ul>
+        </div>
+      </div>
+</footer>
+

@@ -1,0 +1,121 @@
+<header class="sticky-top">
+    <nav class="navBar ">
+
+
+  <ul class="nav-links" >
+    <li class="nav-item"><a class="nav-link " routerLink="/home" >Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Services </a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Hiring</a></li>
+    <li class="nav-item"><a class="nav-link active"  href="/projects">Projects</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+  </ul>
+  <a href="#" class="logoMedai">
+    <img src="assets/images/logo.png2 1.png" alt="Logo">
+  </a>
+</nav>
+</header>
+
+<section class="projects-section">
+  <div class="container">
+    <div class="projects-header">
+      <div class="projects-title">
+        <h1>PROJECTS</h1>
+      </div>
+      <div class="projects-info">
+        <p>
+          WE PROUDLY COLLABORATE WITH CLIENTS ACROSS DIVERSE INDUSTRIES
+          — INCLUDING REAL ESTATE, RESTAURANTS, TECHNOLOGY, AND MORE —
+          DELIVERING TAILORED MARKETING SOLUTIONS THAT DRIVE RESULTS.
+        </p>
+        <button class="projects-button">CHECK OUR SERVICES</button>
+      </div>
+    </div>
+
+    <nav class="project-filters">
+      <ul>
+        <li *ngFor="let filter of projectFilters" 
+            (click)="setActiveFilter(filter)" 
+            [ngClass]="{'active': activeFilter === filter}">
+          <a >{{ filter }}</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="swiper project-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let project of filteredProjects">
+        <div class="project-item">
+          <img [src]="project.imageUrl" alt="{{ project.title }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work-section ">
+  <div class="container">
+    <h2 class="section-title">OUR WORK ACROSS INDUSTRIES</h2>
+    
+    <div class="swiper work-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let slide of slides">
+          <ng-container [ngSwitch]="slide.type">
+            
+            <img *ngSwitchCase="'single'" [src]="slide.imageUrl" alt="Work sample" class="single-image">
+
+            <div *ngSwitchCase="'grid'" class="slide-grid">
+              <div class="grid-item" *ngFor="let imgUrl of slide.imageUrls">
+                <img [src]="imgUrl" alt="Work sample grid">
+              </div>
+            </div>
+
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    
+    <div class="swiper-pagination-progressbar"></div>
+
+    <p class="section-description">
+      WE COLLABORATE WITH BRANDS ACROSS VARIOUS SECTORS - INCLUDING REAL ESTATE, F&B, TECH, LIFESTYLE, FASHION, HEALTHCARE,
+      AND MORE. EACH PROJECT IS TAILORED TO MEET THE CLIENT'S UNIQUE GOALS AND AUDIENCE.
+    </p>
+  </div>
+</section>
+
+
+<section class="latest-projects">
+  <div class="container">
+    <h2 class="section-title">Latest <strong>Projects</strong></h2>
+    <div class="swiper latest-projects-slider">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide card info-card">
+          <div class="logo-container">
+            <img src="https://img.icons8.com/color/48/sales-performance.png" alt="Sales Logo">
+          </div>
+          
+          <h3>Latest Launches</h3>
+          <p>Explore some of our newest campaigns</p>
+          <div class="button-group">
+            <button class="btn btn-primary">See Projects</button>
+            <button class="btn btn-secondary">Apply</button>
+          </div>
+
+        </div>
+
+        <div class="swiper-slide card image-card tall-card" *ngFor="let project of projects">
+          <img [src]="project.imageUrl" alt="{{ project.title }}">
+          <div class="card-caption">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.category }}</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

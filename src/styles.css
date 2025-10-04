@@ -29,11 +29,6 @@ h2 {
   display: none !important;
 }
    body { height: 200vh; font-family: sans-serif;  touch-action: none;}
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
 
 
 
