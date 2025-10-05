@@ -15,6 +15,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   private projectSwiper: Swiper | undefined;
   private workSliderInstance: Swiper | undefined;
   private projectsLatestSwiper: Swiper | undefined;
+    private navObserver: IntersectionObserver | undefined;
   projectFilters = ['Websites', 'Mobile App', 'Brand Identity', 'Media Buying', 'Graphic Design Team'];
   activeFilter = 'Websites';
 
@@ -111,29 +112,51 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   ];
     projects = [
     {
-      imageUrl: 'https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      imageUrl: 'assets/images/imageLatest3.png',
       title: 'MediaZone',
       category: 'Rebranding'
     },
     {
-      imageUrl: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Noya Broker App',
-      category: 'mobile app'
+      imageUrl: 'assets/images/imageLatest1.png',
+      title: 'MediaZone',
+      category: 'Rebranding'
     },
     {
-      imageUrl: 'https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Hoops',
-      category: 'Branding'
+      imageUrl: 'assets/images/imageLatest2.png',
+      title: 'Noya',
+      category: 'Broker Ai Tool'
     } ,
     {
-      imageUrl: 'https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Hoops',
-      category: 'Branding'
+      imageUrl: 'assets/images/imageLatest3.png',
+      title: 'MediaZone',
+      category: 'Rebranding'
     },
     {
-      imageUrl: 'https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Hoops',
-      category: 'Branding'
+      imageUrl: 'assets/images/imageLatest1.png',
+      title: 'MediaZone',
+      category: 'Rebranding'
+    },
+    {
+      imageUrl: 'assets/images/imageLatest2.png',
+      title: 'Noya',
+      category: 'Broker Ai Tool'
+    } ,
+  ];
+   projectsClient = [
+    {
+      title: 'Chiringuito',
+      imageUrl: 'assets/images/imageClient1.png',
+      captions: ['Line', 'Branding']
+    },
+    {
+      title: 'Vicio',
+      imageUrl: 'assets/images/imageClient2.png',
+      captions: ['Branding', 'Line']
+    },
+    {
+      title: 'Westwood Tennis Club',
+      imageUrl: 'assets/images/imageClient3.png',
+      captions: ['Line', 'Branding']
     }
   ];
   filteredProjects: any[] = [];
@@ -148,6 +171,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     this.initSwiper();
     this.workSwiper();
     this.latestSwiper();
+     this.setupNavObserver();
   }
 
   initSwiper(): void {
@@ -206,7 +230,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         el: '.swiper-pagination-progressbar',
         type: 'progressbar',
       },
-      // autoplay: { delay: 2000, disableOnInteraction: false },
+      autoplay: { delay: 2000, disableOnInteraction: false },
       breakpoints: {
         640: {
           slidesPerView: 2,
@@ -234,5 +258,32 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       // لاحظ أننا نقوم بتحديث الـ slider الصحيح
       this.projectSwiper?.update();
     }, 0);
+  }
+
+    setupNavObserver(): void {
+    const navLinks = document.querySelector('.nav-links');
+    const targetSection = document.querySelector('.latest-projects');
+
+    if (!navLinks || !targetSection) {
+      return;
+    }
+
+    const options = {
+      root: null,
+      rootMargin: '-80px 0px 0px 0px',
+      threshold: 0.1
+    };
+
+    this.navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.classList.add('change-color');
+        } else {
+          navLinks.classList.remove('change-color');
+        }
+      });
+    }, options);
+
+    this.navObserver.observe(targetSection);
   }
 }

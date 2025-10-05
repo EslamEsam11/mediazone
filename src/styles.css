@@ -57,6 +57,10 @@ h2 {
     font-family: R-Hiragino;
     src: url(../src/fonts/Hiragino\ Maru\ Gothic\ ProN\ W4.otf)
 }
+@font-face {
+    font-family: R-VinaSans;
+    src: url(../src/fonts/VinaSans-Regular.ttf)
+}
 
 .R-saesgrotesk{
     font-family:  R-saesgrotesk;
