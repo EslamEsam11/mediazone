@@ -2,7 +2,7 @@
     <nav class="navBar ">
 
 
-  <ul class="nav-links" >
+  <ul class="nav-links" [class.nav-open]="isMenuOpen" >
     <li class="nav-item"><a class="nav-link " routerLink="/home" >Home</a></li>
     <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Services </a></li>
@@ -10,6 +10,11 @@
     <li class="nav-item"><a class="nav-link active"  href="/projects">Projects</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
   </ul>
+    <button class="nav-toggle" aria-label="toggle navigation" 
+          (click)="toggleMenu()" 
+          [class.is-active]="isMenuOpen">
+    <span class="hamburger"></span>
+  </button>
   <a href="#" class="logoMedai">
     <img src="assets/images/logo.png2 1.png" alt="Logo">
   </a>

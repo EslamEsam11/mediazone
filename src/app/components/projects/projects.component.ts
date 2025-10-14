@@ -11,7 +11,7 @@ import Swiper from 'swiper/bundle';
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
-
+    isMenuOpen = false;
   private projectSwiper: Swiper | undefined;
   private workSliderInstance: Swiper | undefined;
   private projectsLatestSwiper: Swiper | undefined;
@@ -160,7 +160,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     }
   ];
   filteredProjects: any[] = [];
-
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   constructor() { }
 
   ngOnInit(): void {
@@ -182,7 +184,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       autoplay: { delay: 2000, disableOnInteraction: false },
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
         768: {
           slidesPerView: 3,

@@ -95,7 +95,7 @@
   display: block;
 }
 .nav-links.change-color a {
-  color: #0044ff !important; /* <--- ضع هنا اللون الجديد الذي تريده */
+  color: #0044ff !important; 
 }
 
 .navBar {
@@ -633,4 +633,169 @@ width: 252px !important;
   color: #8A9AC0;
   line-height: 1.6;
   margin: 0 0 15px 0;
+}
+
+button.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 992px) {
+ button.nav-toggle {
+    display: block;
+}
+ .navBar .logoMedai {
+    right: 4%;
+    rotate: -22deg;
+}
+  .navBar {
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+   .nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+        right: -1px;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-links.nav-open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    color: #fff !important;
+    font-size: 1.5rem;
+  }
+
+  .nav-toggle.is-active .hamburger {
+    transform: rotate(-6deg);
+    background: #000;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+}
+  .nav-toggle.is-active .hamburger::before {
+    top: 0;
+    transform: rotate(90deg);
+    background: #000;
+  }
+  .nav-toggle.is-active .hamburger::after {
+    display: none;
+  }
+
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 0px;
+  background: #333;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  left: 0;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.title-area h2 {
+    font-size: 110px;
+}
+.cta-main h2 span {
+    font-size: 100px;
+}
+}
+
+@media (max-width: 768px) {
+ 
+.projects-info{
+    flex-basis: 100%;
+}
+.project-filters ul {
+    display: none
+;
+
+}
+.link-section .container {
+  padding: 0 10px;
+}
+.link-section a img {
+  width: 100% ;
+  height: 100% ;
+  object-fit: fill;
+  display: block;
+}
+.title-area h2 {
+    font-size: 40px;
+}
+.projects-grid {
+    gap: 8px;
+}
+.project-card img {
+    height: 150px;
+}
+.appreciated-footer{
+    flex-direction: column-reverse;
+        align-items: start;
+                padding: 0 20px;
+}
+
+.cta-main h2{
+    font-size: 34px;
+}
+.cta-main h2 span {
+    font-size: 56px;
+}
+.cta-main{
+    margin-left: auto;
+}
+.cta-join {
+    margin-right: auto;
+}
+.cta-join p {
+    font-size: 23px;
+}
+
+.footer-main {
+    display: flex
+;
+    flex-direction: column;
+}
+.footer-links {
+    gap: 11px;
+}
 }

@@ -414,6 +414,7 @@ ngAfterViewInit() {
           ...autoplayOptions,
           reverseDirection: true,
         },
+
         allowTouchMove: true,
         grabCursor: true,
       });
@@ -429,8 +430,8 @@ ngAfterViewInit() {
         prevEl: ".swiper-button-prev",
       },
             breakpoints: {
-                320: { slidesPerView: 1 },
-                768: { slidesPerView: 1 },
+                320: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
                 1024: { slidesPerView: 5 },
                 1440: { slidesPerView: 5 },
             },

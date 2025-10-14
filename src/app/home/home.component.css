@@ -512,7 +512,7 @@ section#ourServices {
 }
 
 .marquee-container {
-  width: 100%;
+  width: auto;
   background-color: red;
   color: white;
   padding: 5px 0;
@@ -1022,7 +1022,15 @@ a:hover {
     right: -23%;
 }
 .ourServices .title h2 {
-    font-size: 130px;
+        font-size: 75px;
+}
+.marquee-container {
+    width: auto;
+    padding: 2px 0;
+
+}
+.marquee-slide{
+    font-size: 45px;
 }
 .knowforDigital .title h2{
     font-size: 80px;
@@ -1042,13 +1050,17 @@ a:hover {
 
 }
 @media (max-width: 768px) {
+  .home {
+    gap: 80px;
+    margin-bottom: 30px;
+}
   .logoMediaZone{
     top: 21%;
     right: 0;
 }
 .home .logo img {
   width: 200px;
-  height: 100px;
+  height: 130px;
 }
 .home .text h2 {
     font-size: 25px;
@@ -1056,24 +1068,32 @@ a:hover {
 .home .text p {
     font-size: 23px;
 }
-
+.about .container  .row {
+    padding-top: 0;
+}
     .titleAboutUs h2 {
         font-size: 90px;
+            margin-top: 0;
     }
     .aboutUs .titleLeft h2:first-child {
-    font-size: 19px;
+           font-size: 36px;
 }
 .aboutUs .titleRight h2 {
-    font-size: 26px;
+        font-size: 21px;
+        width: 50%;
 
+}
+.aboutUs  .titleLeft  p {
+        width: 66%;
+        font-size: 10px;
 }
 .aboutUs .right .imgR img{
     width: 95px;
     height: 130px;
 }
 .aboutUs .right .imgR {
-    right: 10%;
-    top: 56%;
+        right: 10%;
+        top: -46%;
 }
 .whoAreWe {
     left: -25px;
@@ -1083,7 +1103,7 @@ a:hover {
 }
 .services {
     left: 14%;
-    bottom: 28%;
+  bottom: -6%;
     font-size: 17.17px;
     padding: 2px 9px;
 }
@@ -1096,32 +1116,56 @@ a:hover {
 .ourTeam {
     font-size: 12.46px;
 }
-.caseStudies .container{
+.caseStudies .container {
   flex-direction: column;
 }
+
     .caseStudies .projects h2 {
-        font-size: 80px;
-        padding: 0;
+        font-size: 75px;
+        padding: 23px 55px;
         text-align: center;
+            height: 157px;
     }
         .caseStudies .clients h2{
-        font-size: 71px;
+         font-size: 90px;
         top: 48px;
-        right: 0;
-        rotate: 10deg;
+        right: 0px;
+        padding: 0 40px;
+        rotate: 15deg;
     }
         .caseStudies .projects span {
-        font-size: 74px;
-        top: -25%;
+        font-size: 43px;
+        top: -16%;
         right: 0%;
     }
     .caseStudies .clients::after {
 
-    top: -39px;
-    left: 37px;
+        top: -71px;
+        right: 3px;
 }
+
 .results .left h2 {
-    font-size: 48px;
+    font-size: 40px;
+}
+.results  .row {
+  flex-direction: column-reverse;
+}
+.results .left {
+    padding: 10px;
+}
+.results .left  p {
+    font-size: 25px;
+    margin: 0;
+}
+.results {
+    background: #5EB0BC !important;
+}
+.results .left {
+    background-color: #f23619fc;
+}
+.swiper-section .swiper-slide {
+  width: 150px !important;
+  height: 150px;
 }
 .ourServices .title h2 {
    text-align: center;
@@ -1135,13 +1179,18 @@ a:hover {
 }
 .panel-title{
     font-size: 16.12px;
+    align-items: flex-start;
+    writing-mode: inherit;
+    transform: rotate(0deg);
+        line-height: 150%;
+        height: 20px;
 }
 .panel-content button {
     font-size: 9px;
 }
 .panel-content {
     padding: 0 10px;
-            margin-top: 30px;
+              margin-top: 50px;
 }
 .panel-content h2 {
     font-size: 20px;
@@ -1154,6 +1203,7 @@ a:hover {
 }
 .accordion-container {
     height: auto;
+            flex-direction: column;
 }
 .our-work .container .title h2 {
     font-size: 76.85px;
@@ -1165,7 +1215,17 @@ a:hover {
         font-size: 39px;
     }
     .meetOurTeam .title h2 {
-    font-size: 64px;
+font-size: 140px;
+        text-align: center;
+}
+.knowforDigital {
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+}
+.teamMediaZone .swiper-slide {
+    height: 500px;
 }
   .site-footer .container .footer-links{
     display: none;
@@ -1296,4 +1356,7 @@ a:hover {
   .nav-toggle.is-active .hamburger::after {
     display: none;
   }
+
+
+
 }
